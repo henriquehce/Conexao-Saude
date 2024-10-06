@@ -5,6 +5,7 @@ Necessário realizar as seguinte atividades para o projeto
     - Será realizado no FIGMA 
   - Desenvolvimento do Front-End
     - Conforme projeto do Figma 
+      - Necessário back-end criar as API'S que ligam o banco de dados com o codigo principal
   - Hospedagem do site
   - Criação de API's
     - API para autenticação de login
