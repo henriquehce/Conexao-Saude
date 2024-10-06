@@ -1,0 +1,237 @@
+/* Barra de pesquisa */
+.filtro-atendimento {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 450px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+}
+
+.filtro-exames {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    flex: 1;
+    margin: 0 10px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.botoes-filtro,
+.botoes-filtro-lupa {
+    cursor: pointer;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+/* Lista de Atendimentos */
+.lista-atendimentos {
+    max-height: 80vh; /* Ocupa 80% da altura da tela */
+    width: 100%;
+    max-width: 500px;
+    background-color: #D9D9D9;
+    padding: 10px;
+    list-style: none;
+    overflow-y: auto;
+    margin: 0;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Itens de Atendimento */
+.item-atendimento {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+/* Ícones de Exame e Seta */
+.icone {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.seta {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Status do Atendimento */
+.status {
+    width: 60px;
+    height: 60px;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+
+/* Informação do Atendimento */
+.info {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Texto do Atendimento */
+.titulo-atendimento {
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.atendimento {
+    text-align: center;
+    font-size: 12px;
+}
+
+/* Ícone para expandir detalhes */
+.botao-expandir {
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Detalhes do Atendimento */
+.laudo-do-paciente {
+    width: calc(100% - 500px);
+    height: 100%;
+    margin-left: 20px;
+    background-color: #D9D9D9;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+/* Lista de Exames */
+.lista-exames {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+/* Estilo para a área de detalhes do laudo */
+.laudo-detalhes {
+    width: 40%;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-left: 2px solid #ccc;
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    overflow-y: auto;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Estiliza cada conteúdo de laudo para alinhamento */
+.laudo-conteudo {
+    display: none; /* Mantido oculto inicialmente */
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para o container de detalhes */
+.laudo-conteudo h2 {
+    margin-bottom: 15px;
+}
+
+/* Ajustes para lista de exames dentro do laudo */
+.lista-exames {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+/* Permite rolagem suave */
+.lista-atendimentos::-webkit-scrollbar {
+    width: 8px;
+}
+
+.lista-atendimentos::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
+}
+
+.lista-atendimentos::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
+}
+/* Mini menu com foto/ícone e nome do paciente */
+.header-paciente {
+    display: flex;
+    align-items: center;
+    background-color: #D9D9D9;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.menu-paciente {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Estilo para o ícone de perfil do usuário */
+.perfil-icone {
+    font-size: 40px;
+    color: #555;
+    margin-right: 10px;
+}
+
+/* Se uma foto de perfil for usada, define o tamanho máximo */
+.perfil-foto {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover; /* Ajusta a imagem ao container */
+    max-width: 40px; /* Limita a largura */
+    max-height: 40px; /* Limita a altura */
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    list-style: none;
+    z-index: 1000;
+}
+
+.dropdown-menu li {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+    background-color: #f0f0f0;
+}
+
+/* Restante do CSS continua igual... */

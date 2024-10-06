@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Laudos</title>
+    <link rel="stylesheet" href="medico.css">
+</head>
+<body>
+    <main class="cadastro-laudo">
+        <h1>Cadastrar Laudo</h1>
+        <form id="form-cadastro-laudo" enctype="multipart/form-data">
+            <label for="paciente-select">Selecionar Paciente:</label>
+            <select id="paciente-select" required>
+                <!-- Opções de pacientes, essas devem ser alimentadas pelo banco ou pela aplicação -->
+                <option value="1">Fernando Galvão Villemann</option>
+                <option value="2">Ana Silva</option>
+                <!-- Adicione outras opções conforme necessário -->
+            </select>
+
+            <label for="data-laudo">Data do Atendimento:</label>
+            <input type="date" id="data-laudo" required>
+
+            <label for="clinica-laudo">Clínica:</label>
+            <input type="text" id="clinica-laudo" placeholder="Nome da Clínica" required>
+
+            <label for="medico-laudo">Médico:</label>
+            <input type="text" id="medico-laudo" placeholder="Nome do Médico" required>
+
+            <label for="exame-laudo">Tipo de Exame:</label>
+            <input type="text" id="exame-laudo" placeholder="Descrição do Exame" required>
+
+            <label for="status-laudo">Status:</label>
+            <select id="status-laudo" required>
+                <option value="Pronto">Pronto</option>
+                <option value="Pendente">Pendente</option>
+            </select>
+
+            <!-- Novo campo para upload de PDF -->
+            <label for="pdf-laudo">Anexar Laudo (PDF):</label>
+            <input type="file" id="pdf-laudo" accept=".pdf" required>
+
+            <button type="submit">Adicionar Laudo</button>
+        </form>
+    </main>
+    <script src="medico.js"></script>
+</body>
+</html>
